@@ -1,0 +1,862 @@
+ /*.................configurações gerais........................*/
+:root{
+    --color--navbg:#212529;
+    --color--base:#ffc800;
+    --color--cinza:#716f6f;
+    --color--funpedidos:#ffc80038;
+    --color--transparente:#00000000;
+    --color--transparente2:#00000080;
+    --color--transparente3:rgba(0, 0, 0, 0.692);
+    --font--header:'Times New Roman', Times, serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    flex: 1;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+.cadasBody{
+    background-image: url('../img/Arco.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.cadasBody::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+
+
+/*.................configurações gerais........................*/
+
+/*.................configurações do pedido.......................*/
+
+.pedido{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color--transparente2);
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+
+}
+.quadradoPedido{
+    width: 80vw;
+    height: 80vh;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 7px var(--color--navbg);  
+}
+
+
+/*.................configurações do pedido.......................*/
+
+/*.................configurações do navbar.......................*/
+
+
+.navbar{
+    width: 100%;
+    z-index: 9999;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--color--navbg);
+    position: fixed;
+    
+}
+#navbarLogin{
+    position: inherit;
+}
+
+.navnav{
+    flex: 2;
+}
+.tituloHome{
+    flex: 1;
+}
+.tituloHome a{
+    text-decoration: none;
+    color:var(--color--base);
+    
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.nav-item {
+    flex: 1;
+    margin-right: 5px;
+}
+.nav-item a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.nav-item a:hover{
+    color: var(--color--base);
+}
+.login{
+    background-color: #ffc800;
+    padding: 5px;
+    border-radius:10px ;
+    text-align:center;
+}
+.login a:hover{
+    color: var(--color--navbg);
+}
+#navMenuLogin{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+#navMenuLogin ul li a{
+    text-decoration: underline;
+    
+}
+.carrinhoCont{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: -1px -1px 7px;
+    padding: 15px;
+}
+.carrinho{
+    width: 40px;
+    height: 40px;
+    background-color: var(--color--base);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.qtpedido{
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: larger;
+    
+
+
+}
+.endereco{
+    align-self: self-start;
+    margin-left: 30px;
+
+}
+
+/*.................configurações do navbar.......................*/
+
+
+
+/*................configurações do cabeçalho...................*/
+header{
+    background-image: url('../img/Arco.jpg');
+    width: 100%;
+    height:80vh;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px black;
+}
+header .container{
+    color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tituloHeader{
+    font-family:var(--font--header);
+    font-size: 60px;
+    text-shadow: 0px 0px 7px black;
+    text-align: center;
+    
+}
+.blur{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color--transparente3);
+}
+.conf a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font: bold;
+}
+.conf{
+    background-color: var(--color--base);
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-top:30px;
+    font-size: 30px;
+}
+.conf a:hover{
+    color:var(--color--navbg);
+    transition: 0.3s;
+}
+.conf:hover{
+    box-shadow: 0px 0px 7px white;
+    transition:0.5s;
+}
+
+/*................configurações do cabeçalho...................*/
+
+/*................configurações do main........................*/
+
+.loginMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.loginEvent{
+    flex: 0;
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+    margin-top: 10px;
+    margin-left:60px ;
+    align-self: flex-start;
+}
+.loginEvent .login{
+    margin-left: 30px;
+}
+main{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+main .container{
+    flex-direction: column;
+}
+.blurLogin{
+    
+    background-color:var(--color--transparente3) ;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.container{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginWin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px black;
+    margin: 0px;
+    width: 600px;
+    height: 450px;
+    background-color: var(--color--transparente3);
+    color: #ffffff;
+}
+.cadastroWin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px black;
+    margin: 0px;
+    width: 700px;
+    height: auto;
+    background-color: var(--color--transparente3);
+    padding: 40px;
+    color: #ffffff;
+    position: static;
+    z-index: 0;
+}
+#caixaMostrar{
+    display: flex;
+    flex-direction: row;
+}
+.mostrarSenha{
+    padding-left: 20px;
+
+}
+
+
+.textoCadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.textoCadastro label{
+    align-self: self-start;
+    margin-top: 10px    ;
+}
+.textoCadastro input{
+    width: 100%;
+    height: 35px;
+    border-radius: 12px;
+    padding-left: 20px;
+}
+.numeroBairro{
+    display: flex;
+    flex-direction: row;
+
+}
+#numero{
+  flex: 1; 
+  margin-right: 10px; 
+}
+#bairro{
+    flex: 2;
+}
+#cadastrarButton #loginButton{
+    height: 35px;
+    flex: 0;
+    
+}
+#cadastrarButton{
+    margin-top: 20px;
+}
+.nome{
+    width: 100%;
+}
+#nomes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nome input{
+    width: 95%;
+}
+.cadastro{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-checkbox input {
+    display: none;
+}
+
+.checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid var(--color--cinza);
+    border-radius: 50%;
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background-color: var(--color--base);
+}
+/*................configurações do main........................*/
+
+
+
+
+/*................configuração das seções.......................*/
+
+
+/*.................de diferentes pedidos .......................*/
+.mainCont{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.pratos{
+    height: 200px;
+    width: 460px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5625rem;
+    display:flex; 
+}
+.pratos:hover{
+    height: 205px;
+    width: 500px;
+    background-color:var(--color--funpedidos) ;
+}
+.pratoSepara{
+    flex: 1;
+    height: 100%;
+    border-radius: 1.5625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pedidoButton{
+    width: 100%;
+    background-color: var(--color--transparente);
+}
+.pedidoButton:hover{
+    background-color: var(--color--transparente);
+}
+.pratoSepara .pedidoButton{
+    height: 100%;
+    border-radius: 0px 25px 25px 0px;
+    border: none;
+    background-color: #ffffff;
+}
+.imgProduto{
+    width: 150px;
+    height: 150px;
+    background-color: #ffc800;
+    border-radius: 50%;
+    box-shadow:1px 1px 5px var(--color--navbg) inset;
+}
+.pratoSepara2{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+.descricao{
+    width: 100px;
+    height: 85px;
+}
+.precos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.descricao{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tituloSec {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 90px;
+    border-bottom:2px solid #716f6f;
+    width: 100%;
+}
+.tituloSec2{
+    text-align: center;
+    margin: 40px;
+}
+.porcaoI, .porcaoM{
+    flex:1;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.porcaoI h2, .porcaoM h2{
+    flex: 1;
+    justify-content: center;
+}
+.porcaoM{
+    border-right: 1px solid var(--color--cinza);
+}
+.sections{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*.................Ptiscos Frios .......................*/
+
+
+
+#prato1 .imgProduto{
+    background-image: url('../img/portfolio/1.jpg');
+    background-size: cover;
+    background-position: -20px;
+}
+#prato2 .imgProduto{
+    background-image: url('../img/portfolio/2.jpg');
+    background-size: cover;
+    background-position:-50px;
+}
+#prato3 .imgProduto{
+    background-image: url('../img/portfolio/3.jpg');
+    background-size: cover;
+    background-position:-20px;
+}
+#prato4 .imgProduto{
+    background-image: url('../img/portfolio/4.jpg');
+    background-size: cover;
+    background-position:-40px;
+}
+#prato5 .imgProduto{
+    background-image: url('../img/portfolio/5.jpg');
+    background-size: cover;
+    background-position:-40px;
+}
+#prato6 .imgProduto{
+    background-image: url('../img/portfolio/6.jpg');
+    background-size: cover;
+    background-position:-40px;
+}
+#prato7 .imgProduto{
+    background-image: url('../img/portfolio/7.jpg');
+    background-size: cover;
+    background-position:-40px;
+}
+
+/*.....................Combos de petiscos.......................*/
+
+
+
+/*.....................Combos de petiscos.......................*/
+
+
+/*.................Ptiscos Frios .......................*/
+
+/*.................Ptiscos Porçõe/unidade .......................*/
+
+
+
+
+#prato8 .imgProduto{
+    background-image: url('../img/portfolio/8.jpg');
+    background-size: cover;
+}
+#prato9 .imgProduto{
+    background-image: url('../img/portfolio/9.jpg');
+    background-size: cover;
+    background-position: -30px;
+}
+#prato10 .imgProduto{
+    background-image: url('../img/portfolio/10.jpg');
+    background-size: cover;
+}
+#prato11 .imgProduto{
+    background-image: url('../img/portfolio/11.jpg');
+    background-size: cover;
+    background-position: 0px -70px;
+}
+#prato12 .imgProduto{
+    background-image: url('../img/portfolio/12.jpg');
+    background-size: cover;
+    background-position: 0px -40px;
+}
+#prato13 .imgProduto{
+    background-image: url('../img/portfolio/13.jpg');
+    background-size: cover;
+    background-position: -20px ;
+}
+#prato14 .imgProduto{
+    background-image: url('../img/portfolio/14.jpg');
+    background-size: cover;
+    background-position: -20px ;
+}
+#prato15 .imgProduto{
+    background-image: url('../img/portfolio/15.jpg');
+    background-size: cover;
+    background-position: -10px ;
+}
+#prato16 .imgProduto{
+    background-image: url('../img/portfolio/16.jpg');
+    background-size: cover;
+    background-position: 0px 4px ;
+}
+#prato17 .imgProduto{
+    background-image: url('../img/portfolio/17.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+
+/*.................Ptiscos Porções/unidade .......................*/
+
+
+
+/*.......................Ptiscos Porções..........................*/
+
+
+#prato18 .imgProduto{
+    background-image: url('../img/portfolio/18.jpg');
+    background-size: cover;
+}
+#prato19 .imgProduto{
+    background-image: url('../img/portfolio/19.jpg');
+    background-size: cover;
+    
+}
+#prato20 .imgProduto{
+    background-image: url('../img/portfolio/20.jpg');
+    background-size: cover;
+    background-position: -20px;
+    
+}
+#prato21 .imgProduto{
+    background-image: url('../img/portfolio/21.jpg');
+    background-size: cover;
+    background-position: -20px;
+    
+}
+#prato22 .imgProduto{
+    background-image: url('../img/portfolio/22.jpg');
+    background-size: cover;
+    background-position: -20px;
+    
+}
+#prato23 .imgProduto{
+    background-image: url('../img/portfolio/23.jpg');
+    background-size: cover;
+    background-position: -20px;
+    
+}
+#prato24 .imgProduto{
+    background-image: url('../img/portfolio/24.jpg');
+    background-size: cover;
+    background-position: -20px;
+    
+}
+#prato25 .imgProduto{
+    background-image: url('../img/portfolio/25.jpg');
+    background-size: cover; 
+}
+#prato26 .imgProduto{
+    background-image: url('../img/portfolio/26.jpg');
+    background-size: cover; 
+}
+
+
+
+/*.......................Ptiscos Porções..........................*/
+
+
+
+
+
+/*......................Porção na Chapa...........................*/
+
+
+#prato27 .imgProduto{
+    background-image: url('../img/portfolio/27.jpg');
+    background-size: cover; 
+    background-position: -20px;
+}
+#prato28 .imgProduto{
+    background-image: url('../img/portfolio/28.jpg');
+    background-size: cover; 
+    background-position: -20px;
+}
+#prato29 .imgProduto{
+    background-image: url('../img/portfolio/29.jpg');
+    background-size: cover;
+}
+#prato30 .imgProduto{
+    background-image: url('../img/portfolio/30.jpg');
+    background-size: cover;
+}
+#prato31 .imgProduto{
+    background-image: url('../img/portfolio/31.jpg');
+    background-size: cover;
+}
+#prato32 .imgProduto{
+    background-image: url('../img/portfolio/32.jpg');
+    background-size: cover;
+    background-position: -20px;
+}
+#prato33 .imgProduto{
+    background-image: url('../img/portfolio/33.jpg');
+    background-size: cover;
+    background-position: -20px;
+}
+
+
+
+/*......................Porção na Chapa...........................*/
+
+
+
+/*......................Costela no Bafo...........................*/
+
+
+#prato34 .imgProduto{
+    background-image: url('../img/portfolio/34.jpg');
+    background-size: cover;
+    background-position: 0px;
+}
+
+
+/*......................Costela no Bafo...........................*/
+
+
+
+/*........................Bife à Parmegiana.........................*/
+
+#prato38 .imgProduto{
+    background-image: url('../img/portfolio/38.jpg');
+    background-size: cover;
+    background-position: 0px;
+}
+
+/*........................Bife à Parmegiana.........................*/
+
+/*................configuração das seções.......................*/
+/*.................de diferentes pedidos .......................*/
+
+/*................configuração das seções.......................*/
+/*......................de Bebidas .............................*/
+
+/*............................Bebidas...........................*/
+
+
+/*.........................Cerveja.............................*/
+
+#prato39 .imgProduto{
+    background-image: url('../img/portfolio/39.jpg');
+    background-size: cover;
+}
+#prato40 .imgProduto{
+    background-image: url('../img/portfolio/40.jpg');
+    background-size: cover;
+}
+#prato41 .imgProduto{
+    background-image: url('../img/portfolio/41.jpg');
+    background-size: cover;
+}
+#prato42 .imgProduto{
+    background-image: url('../img/portfolio/42.jpg');
+    background-size: cover;
+}
+#prato43 .imgProduto{
+    background-image: url('../img/portfolio/43.jpg');
+    background-size: cover;
+}
+#prato44 .imgProduto{
+    background-image: url('../img/portfolio/44.jpg');
+    background-size: cover;
+}
+#prato45 .imgProduto{
+    background-image: url('../img/portfolio/45.jpg');
+    background-size: cover;
+    background-position: 0px;
+
+}
+#prato46 .imgProduto{
+    background-image: url('../img/portfolio/46.jpg');
+    background-size: cover;
+
+}
+#prato47 .imgProduto{
+    background-image: url('../img/portfolio/47.jpg');
+    background-size: cover;
+
+}
+#prato48 .imgProduto{
+    background-image: url('../img/portfolio/48.jpg');
+    background-size: cover;
+
+}
+#prato49 .imgProduto{
+    background-image: url('../img/portfolio/49.jpg');
+    background-size: cover;
+
+}
+#prato50 .imgProduto{
+    background-image: url('../img/portfolio/50.jpg');
+    background-size: cover;
+    background-position: 5px -20px;
+}
+#prato51 .imgProduto{
+    background-image: url('../img/portfolio/51.jpg');
+    background-size: cover;
+    background-position: 0px -9px;
+
+}
+#prato52 .imgProduto{
+    background-image: url('../img/portfolio/52.jpg');
+    background-size: cover;
+    background-position: 0px -9px;
+
+}
+#prato53 .imgProduto{
+    background-image: url('../img/portfolio/53.jpg');
+    background-size: cover;
+    background-position: -7px -25px;
+
+}
+#prato54 .imgProduto{
+    background-image: url('../img/portfolio/54.jpg');
+    background-size: cover;
+}
+#prato55 .imgProduto{
+    background-image: url('../img/portfolio/55.jpg');
+    background-size: 150%;
+    background-position: -20px ;
+}
+#prato56 .imgProduto{
+    background-image: url('../img/portfolio/56.jpg');
+    background-size: cover;
+    background-position: 0px;
+}
+#prato57 .imgProduto{
+    background-image: url('../img/portfolio/57.jpg');
+    background-size: cover;
+    background-position: 0px;
+}
+#prato58 .imgProduto{
+    background-image: url('../img/portfolio/58.jpg');
+    background-size: cover;
+    background-position: 0px;
+}
+
+
+
+/*.........................Cerveja.............................*/
+
+
+
+
+
+
+/*............................Bebidas...........................*/
+
+
+/*................configuração das seções.......................*/
+/*......................de Bebidas .............................*/
+

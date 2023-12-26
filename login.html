@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/logos/favicon.ico" type="image/x-icon">
+    <title>Santo Arco</title>
+</head>
+<body class="cadasBody">
+    <nav class="navbar" id="navbarLogin">
+        <div class="container">
+            <div class="tituloHome"><a href="index.html"><h1>Santo Arco</h1></a></div> 
+            <div class="navnav" id="navMenuLogin">
+                <ul type="none">
+                    <li class="nav-item"><a href="cadastro.html">Cadastrar-se</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="loginMain">
+            <div class="container">
+               <form class="loginWin">
+                    <div class="textoCadastro">
+                        <label for="email">Email:</label>
+                        <input class="textInput" type="email" placeholder="Digite seu email">
+                    </div>
+                    <div class="textoCadastro">
+                        <label for="senha">Senha:</label>
+                        <input type="password" class="senha" name="senha" placeholder="Digite a senha">
+                    </div>
+
+                    <div class="loginEvent">
+                        <div id="caixaMostrar">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" class="mostrarSenha">
+                                <span class="checkmark"></span>
+                                Mostrar senha
+                            </label>
+                        </div>
+                        <a href="teladologado.html">
+                            <button class="login" id="loginButton">
+                                Login
+                            </button>
+                        </a>
+                    </div>
+                </form> 
+            </div>
+        
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
